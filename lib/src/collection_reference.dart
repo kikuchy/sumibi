@@ -49,8 +49,7 @@ class _CollectionReference implements CollectionReference {
   Firestore get firestore => _delegate.firestore;
 
   @override
-  Future<QuerySnapshot> getDocuments(
-          {Source source = Source.serverAndCache}) =>
+  Future<QuerySnapshot> getDocuments({Source source = Source.serverAndCache}) =>
       _delegate.getDocuments(source: source);
 
   @override
