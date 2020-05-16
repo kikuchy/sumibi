@@ -20,11 +20,14 @@ final sumibi = SumibiFirestore(
   },
 );
 
+
 // Now `user` have properties `name`, `createdAt` and `updatedAt`.
 final user = await sumibi.collection("/users").add({"name": "John"});
 
-// Now `user.name` will be "Alex" and `user.updatedAt` will be updated. 
+// Now `user.name` will be "May" and `user.updatedAt` will be updated. 
 await user.updateData({"name": "May"});
+
+
 
 final friends = user.collection("/friends");
 await sumibi.batch()
@@ -34,6 +37,8 @@ await sumibi.batch()
   // `user.updatedAt` will be updated.
   ..updateData(user, {"numOfFriends": 2})
   ..commit();
+
+
 
 sumibi.runTransaction((transaction) {
   // After this transaction, `user.updatedAt` will be updated.

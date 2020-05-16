@@ -1,7 +1,7 @@
 name: sumibi
-description: A new Flutter project.
+description: Sumibi is simple, hookable Firestore library. You can inject hook methods on `setData`/`set` and `updateData`/`update`.
 version: 1.0.0
-homepage:
+homepage: https://github.com/kikuchy/sumibi
 
 environment:
   sdk: ">=2.8.1 <3.0.0"
