@@ -50,7 +50,7 @@ class _CollectionReference implements CollectionReference {
 
   @override
   Future<QuerySnapshot> getDocuments(
-          {Source source = platform.Source.serverAndCache}) =>
+          {Source source = Source.serverAndCache}) =>
       _delegate.getDocuments(source: source);
 
   @override

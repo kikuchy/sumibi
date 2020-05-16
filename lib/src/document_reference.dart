@@ -46,7 +46,7 @@ class _DocumentReference implements DocumentReference {
 
   @override
   Future<DocumentSnapshot> get({
-    platform.Source source = platform.Source.serverAndCache,
+    Source source = Source.serverAndCache,
   }) =>
       _delegate.get(source: source);
 
